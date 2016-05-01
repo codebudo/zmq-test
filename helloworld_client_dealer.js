@@ -16,7 +16,7 @@ requester.on('message', function(msg) {
 var i = 0; 
 while( i < 10 ){
   i++;
-  console.log('sending '+replyNbr);
+  console.log('sending '+i);
   requester.send('', zmq.ZMQ_SNDMORE);
-  requester.send('Hello'+replyNbr);
+  requester.send('Hello'+i);
 }
